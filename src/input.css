@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.text-logo {
+  font-family: "Dancing Script", cursive;
+}
+.all-header {
+  clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 100%, 38% 92%, 0 100%, 0 0);
+}
+
+@layer components {
+  .text-logo {
+    @apply text-3xl cursor-pointer hover:scale-100;
+  }
+  .logo {
+    @apply max-w-[85%] mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center text-white;
+  }
+  .primary-btn {
+    @apply inline-flex items-center border-0 py-1 px-3 focus:outline-none text-base mt-4 md:mt-0 bg-gradient-to-r from-sky-500 to-indigo-500 text-white rounded-full;
+  }
+  .hero-content {
+    @apply lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center;
+  }
+  .hero-btn-one {
+    @apply inline-flex primary-btn text-white border-0 py-2 px-6 focus:outline-none rounded text-lg;
+  }
+  .hero-btn-two {
+    @apply ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg;
+  }
+}
